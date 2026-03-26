@@ -6,9 +6,9 @@ A modern HTML5 Canvas reskin of the classic **Space Invaders**—pilot a submari
 
 ## ✨ Features
 - **60FPS smooth gameplay** with `requestAnimationFrame`
-- Player sub moves left/right (arrows/WASD), shoots torpedoes (spacebar/tap)
+- Player sub moves left/right (arrows/WASD), shoots bubbles (spacebar/tap)
 - 5 rows of sea invaders: jellyfish (slow), octopuses, sharks (fast/aggressive)
-- Bubble projectiles from enemies, 3 lives, score + high score (localStorage)
+- Red bubble projectiles from enemies, 3 lives, score + high score (localStorage)
 - Win by clearing all invaders; particle explosions, Web Audio beeps
 - Pause (P), restart (R), touch controls for mobile
 
