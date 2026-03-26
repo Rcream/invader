@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ocean Invaders - Deep Sea Defense</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- HUD Overlay -->
+        <div id="hud">
+            <div class="hud-left">
+                <span class="hud-label">SCORE</span>
+                <span id="score">0</span>
+            </div>
+            <div class="hud-center">
+                <span id="title-hud">OCEAN INVADERS</span>
+            </div>
+            <div class="hud-right">
+                <span class="hud-label">HIGH</span>
+                <span id="highScore">0</span>
+                <div id="lives-container">
+                    <span class="hud-label">LIVES</span>
+                    <div id="lives"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-content">
+                <h1>OCEAN INVADERS</h1>
+                <p class="subtitle">Deep Sea Defense</p>
+                <div class="creature-preview">
+                    <div class="preview-row">
+                        <span class="creature-name">JELLYFISH</span>
+                        <span class="creature-pts">= 30 PTS</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="creature-name">OCTOPUS</span>
+                        <span class="creature-pts">= 20 PTS</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="creature-name">SQUID</span>
+                        <span class="creature-pts">= 20 PTS</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="creature-name">PUFFERFISH</span>
+                        <span class="creature-pts">= 10 PTS</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="creature-name">SHARK</span>
+                        <span class="creature-pts">= 10 PTS</span>
+                    </div>
+                </div>
+                <div class="controls-info">
+                    <p>DESKTOP: ARROWS/WASD + SPACE</p>
+                    <p>MOBILE: JOYSTICK + TAP TO FIRE</p>
+                    <p>P = PAUSE | R = RESTART</p>
+                </div>
+                <button id="start-btn" class="action-btn">DIVE IN</button>
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pause-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h1>PAUSED</h1>
+                <p>Submarine on standby</p>
+                <button id="resume-btn" class="action-btn">RESUME</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h1>GAME OVER</h1>
+                <p>Hull breach detected!</p>
+                <div class="score-display">
+                    <p>FINAL SCORE: <span id="final-score">0</span></p>
+                    <p>HIGH SCORE: <span id="final-high">0</span></p>
+                </div>
+                <button id="restart-btn" class="action-btn">TRY AGAIN</button>
+            </div>
+        </div>
+
+        <!-- Win Screen -->
+        <div id="win-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h1>VICTORY!</h1>
+                <p>Ocean is safe!</p>
+                <div class="score-display">
+                    <p>FINAL SCORE: <span id="win-score">0</span></p>
+                    <p>HIGH SCORE: <span id="win-high">0</span></p>
+                </div>
+                <button id="win-restart-btn" class="action-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+
+        <!-- Mobile Touch Controls -->
+        <div id="touch-controls">
+            <div id="joystick-zone">
+                <div id="joystick-base">
+                    <div id="joystick-stick"></div>
+                </div>
+            </div>
+            <div id="fire-zone">
+                <span>BUBBLE</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
