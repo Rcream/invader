@@ -24,3 +24,4 @@ A modern HTML5 Canvas reskin of the classic **Space Invaders**—pilot a submari
 4. **P** pause, **R** restart
 
 **Live Demo**: (https://rcream.github.io/invader/)
+made with open code & perplexity
